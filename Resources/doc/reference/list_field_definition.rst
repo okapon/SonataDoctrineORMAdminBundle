@@ -2,6 +2,7 @@ List field definition
 =====================
 
 These fields are used to display the information inside the list table.
+これらのフィールドはリストテーブル内に情報を表示する為に使われます。
 
 Example
 -------
@@ -44,13 +45,14 @@ Types available
 
 The most important option for each field is the ``type``: The available
 types include:
+それぞれのフィールドにおいて最も重要なオプションは ``type`` であり、以下のものが利用可能です。
 
 * boolean
 * datetime
 * decimal
 * identifier
 * integer
-* many_to_one : a link will be added to the related edit action
+* many_to_one : a link will be added to the related edit action (関連したeditアクションを関連づけるためにリンクが追加される)
 * string
 * text
 * date
@@ -58,12 +60,13 @@ types include:
 
 If no type is set, the ``Admin`` class will use the type defined in the doctrine
 mapping definition.
+もしタイプがセットされなければ ``Admin`` クラスはdoctrineのマッピング定義により決められたタイプを使います。
 
 List Actions
 ------------
 
 You can set actions for the list items by adding an '_action' field in ``configureListFields``:
-
+ ``configureListFields`` 中に '_action' フィールドを追加することにより、リストアイテムにアクションをセットすることができます。
 .. code-block:: php
 
     <?php
@@ -76,8 +79,10 @@ You can set actions for the list items by adding an '_action' field in ``configu
 
 Edit and delete actions are enabled in the default configuration. You can add
 your own! Default template file is: ``SonataAdminBundle:CRUD:list__action_[ACTION_NAME].html.twig``
+デフォルト設定ではeditとdeleteアクションは有効になっています。あなたは自分のをアクションを追加することができます。デフォルトテンプレートファイルは ``SonataAdminBundle:CRUD:list__action_[ACTION_NAME].html.twig`` です。
 
 You can specify your own by setting up the 'template' option like so:
+次のように 'テンプレート' オプションをセットアップすることで自身のテンプレートを記述することもできます。
 
 .. code-block:: php
 
@@ -131,6 +136,7 @@ Custom template
 ^^^^^^^^^^^^^^^
 
 If you need a specific layout for a row cell, you can define a custom template
+もし行セルにたいして特別なレイアウトが必要であれば、カスタムテンプレートを定義することもできます。
 
 .. code-block:: php
 
@@ -156,6 +162,7 @@ If you need a specific layout for a row cell, you can define a custom template
     }
 
 The related template :
+関連したテンプレート
 
 .. code-block:: jinja
 
