@@ -2,6 +2,7 @@ Templates
 =========
 
 You can customize the global layout by tweaking the ``SonataAdminBundle`` configuration.
+ ``SonataAdminBundle`` の設定を変更することで全体レイアウトをカスタマイズすることができます。
 
 .. code-block:: yaml
 
@@ -18,6 +19,7 @@ You can customize the global layout by tweaking the ``SonataAdminBundle`` config
 
 
 You can also configure the templates used by the Form Framework while rendering the widget
+また、ウィジェットを描画してう時にフォームフレームワークが使う連プレートを設定することもできます。
 
 .. code-block:: yaml
 
@@ -28,6 +30,7 @@ You can also configure the templates used by the Form Framework while rendering 
 
 
 You can also customize field types by adding types in the ``config.yml`` file. The default values are :
+また、 ``config.yml`` ファイルにタイプを追加することでフィールドタイプをカスタマイズすることもできます。
 
 .. code-block:: yaml
 
@@ -67,3 +70,4 @@ You can also customize field types by adding types in the ``config.yml`` file. T
 
     By default, if the ``SonataIntlBundle`` classes are available, then the numeric and date fields will be
     localized with the current user locale.
+    デフォルトでは、 ``SonataIntlBundle`` のクラスが利用可能ですが、数字と日付のフィールドは現在のユーザーロケールにローカライズされます。

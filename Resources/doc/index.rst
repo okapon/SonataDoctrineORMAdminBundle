@@ -2,6 +2,7 @@ Doctrine ORM Admin Bundle
 =========================
 
 The ``Doctrine ORM Admin`` provides services to work with the ``Admin Bundle`` and the ``Doctrine Project``.
+ ``Doctrine ORM Admin`` は ``Admin Bundle`` と ``Doctrine Project`` と連携するサービスを提供します。
 
 **Google Groups**: For questions and proposals you can post on this google groups
 

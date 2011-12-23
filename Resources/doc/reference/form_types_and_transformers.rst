@@ -3,6 +3,7 @@ Form types and data transformers
 
 The AdminBundle is shipped with custom form types and data transfomers in order
 to handle the different model's workflows and lifecycle.
+異なったモデルのワークフローやライフサイクルを対処するため、AdminBundleはカスタムフォームタイプとデータトランスフォーマーを備えて出荷されている（世に送り出されている）
 
 Form types
 ----------
@@ -19,7 +20,17 @@ Form types
 
     - ``sonata_type_immutable_array``: this type allows to edit a fixed array, like a settings array.
 
+    - ``sonata_type_admin`` : このタイプはAdminクラスに関連付けられ、フィールド構造はAdminクラスに委任されている
+
+    - ``sonata_type_collection`` : このタイプのは元々の ``CollectionType`` に似ているが、２つの追加機能を備えている
+      : データ層は実行層と連携するために抽象化され、削除オプションが追加された。つまり、コレクションエントリは削除することができます。(implemented layerは実行層という訳でいいのか？)
+
+    - ``sonata_type_model`` : このタイプのは元々の ``EntityType`` ににているが、この内部は実行層と連携するために抽象化されている。
+
+    - ``sonata_type_immutable_array``: このタイプは固定化された配列を編集することができます。配列を設定するように。
+
 Let's say, the object has settings properties
+仮に、オブジェクトがプロパティ設定を持つとします。
 
 .. code-block:: php
 
@@ -34,6 +45,7 @@ Let's say, the object has settings properties
     }
 
 Now you can edit the settings array with :
+次のように書くことで、配列を編集できるようになります。
 
 .. code-block:: php
 
@@ -65,12 +77,14 @@ Now you can edit the settings array with :
     ));
 
 the output will be :
+表示は次のようになります。
 
 .. image:: ../images/sonata_type_immutable_array.png
            :alt: Immutable Array Type
            :width: 460
 
 Other options :
+他のオプション
 
 .. code-block:: php
 
@@ -116,3 +130,7 @@ Datatransformer
     - ``ArrayToModelTransformer`` : transform an array to an object
     - ``ModelsToArrayTransformer`` : transform a collection of array into a collection of object
     - ``ModelToIdTransformater`` : transform an ``id`` into an object
+
+    - ``ArrayToModelTransformer`` : 配列からオブジェクトへ変換する
+    - ``ModelsToArrayTransformer`` : 配列のコレクションからオブジェクトのコレクションへ変換する
+    - ``ModelToIdTransformater`` :  ``id`` からオブジェクトへ変換する
