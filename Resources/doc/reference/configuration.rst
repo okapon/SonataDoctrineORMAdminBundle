@@ -1,12 +1,13 @@
-Configuration
-=============
+Configuration（設定）
+=====================
 
 The configuration section is only about the ``SonataDoctrineORMAdminBundle`` for more information about the
 global configuration of the ``SonataAdminBundle`` please refer to the dedicated documentation.
+
 この設定セクションは ``SonataDoctrineORMAdminBundle`` に限ったものであり、 ``SonataAdminBundle`` 全体の設定に関するより多くの情報は ``SonataAdminBundle`` 専用のドキュメントを参照して下さい。
 
-Full Configuration Options
-==========================
+Full Configuration Options （全ての設定オプション）
+===================================================
 
 .. code-block:: yaml
 

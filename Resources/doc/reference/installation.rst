@@ -2,9 +2,10 @@ Installation
 ============
 
 First install the Sonata Admin Bundle which provides Core functionalities. The ``EntityAudit`` is an optional
-まず初めにコア機能を提供している Sonata Admin Bundle をインストールしてください。 ``EntityAudit`` は 任意です。
 
-history feature (https://github.com/simplethings/EntityAudit).
+まず初めにコア機能を提供している Sonata Admin Bundle をインストールしてください。 ``EntityAudit`` は オプション（任意）です。
+
+history feature 【履歴機能】(https://github.com/simplethings/EntityAudit).
 
 Download bundles
 ----------------
@@ -30,6 +31,7 @@ Configuration
 
 Next, be sure to enable the bundles in your autoload.php and AppKernel.php
 files:
+
 次に、bundleを有効化する為に autoload.php and AppKernel.phpkに記述して下さい。
 
 .. code-block:: php

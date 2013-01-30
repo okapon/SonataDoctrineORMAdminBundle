@@ -3,33 +3,26 @@ Form types and data transformers
 
 The AdminBundle is shipped with custom form types and data transfomers in order
 to handle the different model's workflows and lifecycle.
+
 異なったモデルのワークフローやライフサイクルを対処するため、AdminBundleはカスタムフォームタイプとデータトランスフォーマーを備えて出荷されている（世に送り出されている）
 
 Form types
 ----------
 
     - ``sonata_type_admin`` : this type is linked to an Admin class and the field construction is
-      delegated to an Admin class.
+      delegated to an Admin class. (このタイプはAdminクラスに関連付けられ、フィールド構造はAdminクラスに委任されている)
 
     - ``sonata_type_collection`` : this type works like the native ``CollectionType`` but contains two extra
-      features : the data layer is abstracted to work with any implemented layer and a delete option is added
-      so a collection entry can be deleted.
+      features (このタイプのは元々の ``CollectionType`` に似ているが、２つの追加機能を備えている): the data layer is abstracted to work with any implemented layer and a delete option is added
+      so a collection entry can be deleted. (データ層はいかなる実行層とでも働くように抽象化され、削除オプションが追加された。よって、コレクションエントリは削除することができます。 「implemented layerは実行層という訳でいいのか？」)
 
     - ``sonata_type_model`` : this type works like the native ``EntityType`` but this internal is abstracted
-      to work with any implemented layer.
+      to work with any implemented layer. (このタイプのは元々の ``EntityType`` ににているが、この内部は実行層と連携するために抽象化されている。)
 
-    - ``sonata_type_immutable_array``: this type allows to edit a fixed array, like a settings array.
-
-    - ``sonata_type_admin`` : このタイプはAdminクラスに関連付けられ、フィールド構造はAdminクラスに委任されている
-
-    - ``sonata_type_collection`` : このタイプのは元々の ``CollectionType`` に似ているが、２つの追加機能を備えている
-      : データ層は実行層と連携するために抽象化され、削除オプションが追加された。つまり、コレクションエントリは削除することができます。(implemented layerは実行層という訳でいいのか？)
-
-    - ``sonata_type_model`` : このタイプのは元々の ``EntityType`` ににているが、この内部は実行層と連携するために抽象化されている。
-
-    - ``sonata_type_immutable_array``: このタイプは固定化された配列を編集することができます。配列を設定するように。
+    - ``sonata_type_immutable_array``: this type allows to edit a fixed array, like a settings array. (このタイプは固定化された配列を配列設定のように編集することができます。)
 
 Let's say, the object has settings properties
+
 仮に、オブジェクトがプロパティ設定を持つとします。
 
 .. code-block:: php
@@ -45,6 +38,7 @@ Let's say, the object has settings properties
     }
 
 Now you can edit the settings array with :
+
 次のように書くことで、配列を編集できるようになります。
 
 .. code-block:: php
@@ -77,6 +71,7 @@ Now you can edit the settings array with :
     ));
 
 the output will be :
+
 表示は次のようになります。
 
 .. image:: ../images/sonata_type_immutable_array.png
@@ -84,7 +79,6 @@ the output will be :
            :width: 460
 
 Other options :
-他のオプション
 
 .. code-block:: php
 
@@ -127,10 +121,6 @@ Other options :
 Datatransformer
 ---------------
 
-    - ``ArrayToModelTransformer`` : transform an array to an object
-    - ``ModelsToArrayTransformer`` : transform a collection of array into a collection of object
-    - ``ModelToIdTransformater`` : transform an ``id`` into an object
-
-    - ``ArrayToModelTransformer`` : 配列からオブジェクトへ変換する
-    - ``ModelsToArrayTransformer`` : 配列のコレクションからオブジェクトのコレクションへ変換する
-    - ``ModelToIdTransformater`` :  ``id`` からオブジェクトへ変換する
+    - ``ArrayToModelTransformer`` : transform an array to an object (配列からオブジェクトへ変換する)
+    - ``ModelsToArrayTransformer`` : transform a collection of array into a collection of object (配列のコレクションからオブジェクトのコレクションへ変換する)
+    - ``ModelToIdTransformater`` : transform an ``id`` into an object ( ``id`` からオブジェクトへ変換する)
